@@ -1,0 +1,50 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "1577a82e9571e58e0cc81343c2bb907c",
+    "packages": [
+        {
+            "name": "phpstandard/framework",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "../framework",
+                "reference": "8c2b80b4d3c3a827d686596ddd38149480f684c2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Framework\\": "src"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Vusal Orujov",
+                    "email": "or.vusal@gmail.com"
+                }
+            ],
+            "description": "PHP Standard Framework",
+            "transport-options": {
+                "symlink": true,
+                "relative": true
+            }
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "phpstandard/framework": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "2.0.0"
+}

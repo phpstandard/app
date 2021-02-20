@@ -1,0 +1,23 @@
+{
+    "name": "phpstandard/skeleton",
+    "description": "Example application skeleton for PHP Standard Framework",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Vusal Orujov",
+            "email": "or.vusal@gmail.com"
+        }
+    ],
+    "require": {
+        "phpstandard/framework": "@dev"
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../framework",
+            "options": {
+                "symlink": true
+            }
+        }
+    ]
+}
