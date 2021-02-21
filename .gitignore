@@ -3,3 +3,7 @@
 
 # Vendors
 /vendor/
+
+# .env files
+.env*
+!.env.example
