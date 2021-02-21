@@ -10,8 +10,7 @@ define("ROOT_PATH", __DIR__ . '/../');
 require_once 'autoload.php';
 
 // Load env variables
-$dotenv = Dotenv\Dotenv::createImmutable(ROOT_PATH);
-$dotenv->load();
+Dotenv\Dotenv::createImmutable(ROOT_PATH)->load();
 
 // Error reporting
 error_reporting(E_ALL); # Report all errors
