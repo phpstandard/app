@@ -6,7 +6,7 @@ require_once __DIR__ . "/../vendor/autoload.php";
 $loader = new Framework\Autoloader;
 
 // Add namespaces to autoload
-$loader->addNamespace(null, ROOT_PATH . "/src"); # Root source
+$loader->addNamespace(null, __DIR__ . "/../src"); # Root source
 
 // Register the autoloader
 $loader->register();

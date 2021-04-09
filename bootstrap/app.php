@@ -1,17 +1,16 @@
 <?php
 
-// Application start timestamp
-define('APP_START', microtime(true));
+use Framework\Container\Container;
+use Framework\Core\Application;
+use Psr\Container\ContainerInterface;
 
-// Path to root directory
-define("ROOT_PATH", __DIR__ . '/../');
+/** @var (ServiceProviderInterface|string)[] $providers */
+$providers = require ROOT_PATH . '/config/providers.php';
+$container = new Container;
+$app = new Application($container, $providers);
 
-// Include autoloader
-require_once 'autoload.php';
+$container
+    ->set(ContainerInterface::class, $container)
+    ->set(App::class, $app);
 
-// Load env variables
-Dotenv\Dotenv::createImmutable(ROOT_PATH)->load();
-
-// Error reporting
-error_reporting(E_ALL); # Report all errors
-ini_set('display_errors', isset($_ENV['DEBUG']) && $_ENV['DEBUG']);
+return $app;
