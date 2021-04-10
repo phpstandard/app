@@ -1,25 +1,16 @@
 <?php
 
-namespace Providers;
+namespace Bootstrappers;
 
 use Dotenv\Dotenv;
-use Framework\Contracts\Container\BootableServiceProviderInterface;
-use Framework\Contracts\Container\ContainerInterface;
+use Framework\Contracts\Core\BootstrapperInterface;
 
-class ApplicationServiceProvider implements BootableServiceProviderInterface
+class ApplicationBootstrapper implements BootstrapperInterface
 {
     /**
      * @inheritDoc
      */
-    public function register(ContainerInterface $container)
-    {
-        // Register services here
-    }
-
-    /**
-     * @inheritDoc
-     */
-    public function boot()
+    public function bootstrap()
     {
         $this->loadDotenv();
         $this->loadHelperFunctions();
