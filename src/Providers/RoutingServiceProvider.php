@@ -22,10 +22,10 @@ class RoutingServiceProvider implements ServiceProviderInterface
     public function register(ContainerInterface $container)
     {
         $container
-            ->set(EmitterInterface::class, SapiEmitter::class)
-            ->set(RequestHandlerInterface::class, RequestHandler::class)
-            ->set(DispatcherInterface::class, Dispatcher::class)
-            ->set(CallbackResolverInterface::class, CallbackResolver::class)
+            ->set(EmitterInterface::class, SapiEmitter::class, true)
+            ->set(RequestHandlerInterface::class, RequestHandler::class, true)
+            ->set(DispatcherInterface::class, Dispatcher::class, true)
+            ->set(CallbackResolverInterface::class, CallbackResolver::class, true)
             ->set(RouteCollector::class, include ROOT_PATH . '/routes/web.php');
     }
 }
