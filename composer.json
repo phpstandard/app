@@ -13,14 +13,5 @@
         "php": ">=7.2",
         "phpstandard/framework": "@dev",
         "vlucas/phpdotenv": "^5.3"
-    },
-    "repositories": [
-        {
-            "type": "path",
-            "url": "../framework",
-            "options": {
-                "symlink": true
-            }
-        }
-    ]
+    }
 }
