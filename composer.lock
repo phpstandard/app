@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e000fcfb59184f3fd5a21436401f428d",
+    "content-hash": "bdcc50c016113549f7233c340e121598",
     "packages": [
         {
             "name": "graham-campbell/result-type",
@@ -305,16 +305,16 @@
         },
         {
             "name": "phpstandard/framework",
-            "version": "dev-master",
+            "version": "v1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstandard/framework.git",
-                "reference": "4e6a8b6dc9d5fe13e252a571e2808ce15b31bfd0"
+                "reference": "acbfaac79417c6c0c9f1320d20f71a15a1250a4e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstandard/framework/zipball/4e6a8b6dc9d5fe13e252a571e2808ce15b31bfd0",
-                "reference": "4e6a8b6dc9d5fe13e252a571e2808ce15b31bfd0",
+                "url": "https://api.github.com/repos/phpstandard/framework/zipball/acbfaac79417c6c0c9f1320d20f71a15a1250a4e",
+                "reference": "acbfaac79417c6c0c9f1320d20f71a15a1250a4e",
                 "shasum": ""
             },
             "require": {
@@ -327,7 +327,6 @@
                 "psr/http-server-handler": "^1.0",
                 "psr/http-server-middleware": "^1.0"
             },
-            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
@@ -347,9 +346,9 @@
             "description": "PHP Standard Framework",
             "support": {
                 "issues": "https://github.com/phpstandard/framework/issues",
-                "source": "https://github.com/phpstandard/framework/tree/master"
+                "source": "https://github.com/phpstandard/framework/tree/v1.0.0"
             },
-            "time": "2021-04-14T13:36:37+00:00"
+            "time": "2021-04-14T15:21:17+00:00"
         },
         {
             "name": "psr/container",
@@ -997,9 +996,7 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "phpstandard/framework": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
