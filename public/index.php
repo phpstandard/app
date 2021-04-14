@@ -11,7 +11,7 @@ use Psr\Http\Server\RequestHandlerInterface;
 define('APP_START', microtime(true));
 
 // Path to root directory
-define("ROOT_PATH", __DIR__ . '/../');
+define("ROOT_PATH", __DIR__ . '/..');
 
 // Autoload
 include ROOT_PATH . '/bootstrap/autoload.php';
