@@ -5,6 +5,7 @@ use Providers\RoutingServiceProvider;
 
 return [
     // Load framework service providers
+    FrameworkProviders\ViewServiceProvider::class,
     FrameworkProviders\RoutingServiceProvider::class,
 
     // Load pplication service providers
