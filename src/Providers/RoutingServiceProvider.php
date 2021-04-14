@@ -4,15 +4,7 @@ namespace Providers;
 
 use Framework\Contracts\Container\ContainerInterface;
 use Framework\Contracts\Container\ServiceProviderInterface;
-use Framework\Contracts\Emitter\EmitterInterface;
-use Framework\Contracts\Routing\DispatcherInterface;
-use Framework\Contracts\Support\CallbackResolverInterface;
-use Framework\Emitter\SapiEmitter;
-use Framework\Http\RequestHandler;
-use Framework\Routing\Dispatcher;
 use Framework\Routing\RouteCollector;
-use Framework\Support\CallbackResolver;
-use Psr\Http\Server\RequestHandlerInterface;
 
 class RoutingServiceProvider implements ServiceProviderInterface
 {
@@ -22,10 +14,6 @@ class RoutingServiceProvider implements ServiceProviderInterface
     public function register(ContainerInterface $container)
     {
         $container
-            ->set(EmitterInterface::class, SapiEmitter::class, true)
-            ->set(RequestHandlerInterface::class, RequestHandler::class, true)
-            ->set(DispatcherInterface::class, Dispatcher::class, true)
-            ->set(CallbackResolverInterface::class, CallbackResolver::class, true)
             ->set(RouteCollector::class, include ROOT_PATH . '/routes/web.php');
     }
 }
