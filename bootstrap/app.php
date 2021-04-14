@@ -17,4 +17,5 @@ $container
     ->set(ContainerInterface::class, $container)
     ->set(App::class, $app);
 
+$app->boot();
 return $app;

@@ -16,9 +16,8 @@ define("ROOT_PATH", __DIR__ . '/..');
 // Autoload
 include ROOT_PATH . '/bootstrap/autoload.php';
 
-/** @var Application $app Application instance (not bootstrapped) */
+/** @var Application $app Bootstrapped application instance */
 $app = include ROOT_PATH . '/bootstrap/app.php';
-$app->boot();
 
 /** @var EmitterInterface $emitter */
 $emitter = $app->container->get(EmitterInterface::class);
