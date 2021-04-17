@@ -3,10 +3,19 @@
 namespace Bootstrappers;
 
 use Dotenv\Dotenv;
+use Framework\Contracts\Core\ApplicationInterface;
 use Framework\Contracts\Core\BootstrapperInterface;
 
 class ApplicationBootstrapper implements BootstrapperInterface
 {
+    /** @var ApplicationInterface $app */
+    private $app;
+
+    public function __construct(ApplicationInterface $app)
+    {
+        $this->app = $app;
+    }
+
     /**
      * @inheritDoc
      */
@@ -24,7 +33,9 @@ class ApplicationBootstrapper implements BootstrapperInterface
      */
     private function loadDotenv()
     {
-        Dotenv::createImmutable(ROOT_PATH)->load();
+        Dotenv::createImmutable(
+            $this->app->getBasePath()
+        )->load();
     }
 
     /**
@@ -34,7 +45,7 @@ class ApplicationBootstrapper implements BootstrapperInterface
      */
     private function loadHelperFunctions()
     {
-        require_once ROOT_PATH . '/helpers/helpers.php';
+        require_once $this->app->getBasePath() . '/helpers/helpers.php';
     }
 
     /**

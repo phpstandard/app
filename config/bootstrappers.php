@@ -2,6 +2,7 @@
 
 use Framework\Bootstrappers as FrameworkBootstrappers;
 use Bootstrappers\ApplicationBootstrapper;
+use Bootstrappers\RoutingBootstrapper;
 use Bootstrappers\ViewBootstrapper;
 
 return [
@@ -10,5 +11,6 @@ return [
 
     // Application bootstrappers
     ApplicationBootstrapper::class,
-    ViewBootstrapper::class
+    ViewBootstrapper::class,
+    RoutingBootstrapper::class
 ];

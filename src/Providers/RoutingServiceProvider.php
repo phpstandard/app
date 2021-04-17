@@ -13,7 +13,7 @@ class RoutingServiceProvider implements ServiceProviderInterface
      */
     public function register(ContainerInterface $container)
     {
-        $container
-            ->set(RouteCollector::class, include ROOT_PATH . '/routes/web.php');
+        $rc = new RouteCollector;
+        $container->set(RouteCollector::class, $rc);
     }
 }

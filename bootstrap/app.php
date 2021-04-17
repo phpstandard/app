@@ -1,21 +1,27 @@
 <?php
 
 use Framework\Container\Container;
+use Framework\Contracts\Core\ApplicationInterface;
 use Framework\Core\Application;
 use Psr\Container\ContainerInterface;
 
+require __DIR__ . '/autoload.php';
+
+// Application base (root) path
+$base_path = __DIR__ . '/..';
+
 /** @var (ServiceProviderInterface|string)[] $providers */
-$providers = require ROOT_PATH . '/config/providers.php';
+$providers = require __DIR__ . '/../config/providers.php';
 
 /** @var (BootstrapperInterface|string)[] $providers */
-$bootstrappers = require ROOT_PATH . '/config/bootstrappers.php';
+$bootstrappers = require __DIR__ . '/../config/bootstrappers.php';
 
 $container = new Container;
-$app = new Application($container, $providers, $bootstrappers);
+$app = new Application($container, $providers, $bootstrappers, $base_path);
 
 $container
     ->set(ContainerInterface::class, $container)
-    ->set(App::class, $app);
+    ->set(ApplicationInterface::class, $app);
 
 $app->boot();
 return $app;

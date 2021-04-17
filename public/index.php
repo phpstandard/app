@@ -1,7 +1,7 @@
 <?php
 
+use Framework\Contracts\Core\ApplicationInterface;
 use Framework\Contracts\Emitter\EmitterInterface;
-use Framework\Core\Application;
 use Framework\Http\HttpFactory;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
@@ -13,17 +13,14 @@ define('APP_START', microtime(true));
 // Path to root directory
 define("ROOT_PATH", __DIR__ . '/..');
 
-// Autoload
-include ROOT_PATH . '/bootstrap/autoload.php';
-
-/** @var Application $app Bootstrapped application instance */
-$app = include ROOT_PATH . '/bootstrap/app.php';
+/** @var ApplicationInterface $app Bootstrapped application instance */
+$app = include __DIR__ . '/../bootstrap/app.php';
 
 /** @var EmitterInterface $emitter */
-$emitter = $app->container->get(EmitterInterface::class);
+$emitter = $app->getContainer()->get(EmitterInterface::class);
 
 /** @var RequestHandlerInterface $handler */
-$handler = $app->container->get(RequestHandlerInterface::class);
+$handler = $app->getContainer()->get(RequestHandlerInterface::class);
 
 /** @var ServerRequestInterface $request A server request captured from global PHP variables */
 $request = HttpFactory::getGlobalServerRequest();
