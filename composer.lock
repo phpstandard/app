@@ -305,16 +305,16 @@
         },
         {
             "name": "phpstandard/framework",
-            "version": "v1.2.0",
+            "version": "v1.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstandard/framework.git",
-                "reference": "f435b1393b5e59e8a7255b2cf1270015912018c1"
+                "reference": "1ffefc16ea2d2d2153fcab74fe0478add69a87ce"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstandard/framework/zipball/f435b1393b5e59e8a7255b2cf1270015912018c1",
-                "reference": "f435b1393b5e59e8a7255b2cf1270015912018c1",
+                "url": "https://api.github.com/repos/phpstandard/framework/zipball/1ffefc16ea2d2d2153fcab74fe0478add69a87ce",
+                "reference": "1ffefc16ea2d2d2153fcab74fe0478add69a87ce",
                 "shasum": ""
             },
             "require": {
@@ -346,9 +346,9 @@
             "description": "PHP Standard Framework",
             "support": {
                 "issues": "https://github.com/phpstandard/framework/issues",
-                "source": "https://github.com/phpstandard/framework/tree/v1.2.0"
+                "source": "https://github.com/phpstandard/framework/tree/v1.2.1"
             },
-            "time": "2022-02-14T11:08:33+00:00"
+            "time": "2022-02-14T11:38:03+00:00"
         },
         {
             "name": "psr/container",
